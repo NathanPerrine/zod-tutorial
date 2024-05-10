@@ -3,10 +3,22 @@
 import { expect, it } from "vitest";
 import { z } from "zod";
 
-const Form = z.object({
-  password: z.string(),
-  confirmPassword: z.string(),
-});
+const Form = z
+  .object({
+    password: z.string(),
+    confirmPassword: z.string(),
+  })
+  .refine(
+    ({ password, confirmPassword}) => {
+      console.log(password)
+      console.log(confirmPassword)
+      return confirmPassword === password;
+    },
+    {
+      path: ["confirmPassword"],
+      message: "Passwords don't match",
+    }
+  );
 //^ 🕵️‍♂️
 
 export const validateFormInput = (values: unknown) => {

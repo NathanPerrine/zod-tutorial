@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "types": [
+      "vitest/importMeta"
+    ],
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "C:/Users/Nathan/Programming/Projects/zod-tutorial/src/06-default.problem.ts"
+  ]
+}
